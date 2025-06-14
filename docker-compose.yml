@@ -29,7 +29,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgresql+psycopg2://postgres:postgres@db:5432/fastapi_db
+      - DATABASE_URL=${DATABASE_URL}
 
 volumes:
   postgres_data:
